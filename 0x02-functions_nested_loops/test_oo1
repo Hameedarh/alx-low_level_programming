@@ -1,0 +1,6 @@
+ a++;
+}
+}^Z
+[1]+  Stopped                 cat > test_oo1
+root@9024b47c7017:/alx-low_level_programming/0x02-functions_nested_loops# cat > test_oo1
+
