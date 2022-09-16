@@ -1,20 +1,29 @@
-#ifndef MAIN_H
-#define MAIN_H
+#include "main.h"
 
-#include <stdio.h>
+/**
+ * more_numbers - prints numbers from 0 to 14 ten times
+ *
+ *
+ * Return: void
+ */
+void more_numbers(void)
+{
+	int i = 0, a, b;
 
-int _isupper(int c);
-int _isdigit(int c);
-int mul(int a, int b);
-int _putchar(char c);
-void print_numbers(void);
-void print_most_numbers(void);
-void more_numbers(void);
-void print_line(int n);
-void print_diagonal(int n);
-void print_square(int size);
-void print_triangle(int size);
-void num_to_char(unsigned int);
-void print_number(int n);
-
-#endif /* MAIN_H */
+	while (i < 10)
+	{
+		a = 0;
+		while (a < 15)
+		{
+			b = a;
+			if (a > 9)
+				b = a / 10;
+			_putchar('0' + b);
+			if (a > 9)
+				_putchar('0' + a % 10);
+			a++;
+		}
+		_putchar('\n');
+		i++;
+	}
+}
