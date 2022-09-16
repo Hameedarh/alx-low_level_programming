@@ -1,20 +1,28 @@
-#ifndef MAIN_H
-#define MAIN_H
-
 #include <stdio.h>
 
-int _isupper(int c);
-int _isdigit(int c);
-int mul(int a, int b);
-int _putchar(char c);
-void print_numbers(void);
-void print_most_numbers(void);
-void more_numbers(void);
-void print_line(int n);
-void print_diagonal(int n);
-void print_square(int size);
-void print_triangle(int size);
-void num_to_char(unsigned int);
-void print_number(int n);
+/**
+ * main - prints numbers from 1 to 100 followed by a new line and replaces
+ * Fizz, Buzz or FizzBuzz if the number is a multiple of 3, 5
+ *
+ * Return: 0
+ */
+int main(void)
+{
+	int a = 1, i = 2;
 
-#endif /* MAIN_H */
+	printf("%d", a);
+	while (i < 101)
+	{
+		if (i % 3 == 0 && i % 5 == 0)
+			printf(" FizzBuzz");
+		else if (i % 3 == 0)
+			printf(" Fizz");
+		else if (i % 5 == 0)
+			printf(" Buzz");
+		else
+			printf(" %d", i);
+		i++;
+	}
+	printf("\n");
+	return (0);
+}
