@@ -1,20 +1,22 @@
-#ifndef MAIN_H
-#define MAIN_H
+#include "main.h"
 
-#include <stdio.h>
+/**
+ * print_line - prints line using "_" character of n length
+ *@n: length of the line
+ *
+ * Return: void
+ */
+void print_line(int n)
+{
+	int i = 0;
 
-int _isupper(int c);
-int _isdigit(int c);
-int mul(int a, int b);
-int _putchar(char c);
-void print_numbers(void);
-void print_most_numbers(void);
-void more_numbers(void);
-void print_line(int n);
-void print_diagonal(int n);
-void print_square(int size);
-void print_triangle(int size);
-void num_to_char(unsigned int);
-void print_number(int n);
-
-#endif /* MAIN_H */
+	if (n > 0)
+	{
+		while (i < n)
+		{
+			_putchar(95);
+			i++;
+		}
+	}
+	_putchar('\n');
+}
