@@ -1,20 +1,32 @@
-#ifndef MAIN_H
-#define MAIN_H
-
 #include <stdio.h>
+#include <math.h>
 
-int _isupper(int c);
-int _isdigit(int c);
-int mul(int a, int b);
-int _putchar(char c);
-void print_numbers(void);
-void print_most_numbers(void);
-void more_numbers(void);
-void print_line(int n);
-void print_diagonal(int n);
-void print_square(int size);
-void print_triangle(int size);
-void num_to_char(unsigned int);
-void print_number(int n);
+/**
+ * main - prints the largest prime factorial of 612852475143
+ *
+ * Return: 0
+ */
+int main(void)
+{
+	long int max = -1, n = 612852475143;
+	int i = 3;
 
-#endif /* MAIN_H */
+	while (n % 2 == 0)
+	{
+		max = 2;
+		n /= 2;
+	}
+	while (i <= sqrt(n))
+	{
+		while (n % i == 0)
+		{
+			max = i;
+			n = n / i;
+		}
+		i += 2;
+	}
+	if (n > 2)
+		max = n;
+	printf("%ld\n", max);
+	return (0);
+}
