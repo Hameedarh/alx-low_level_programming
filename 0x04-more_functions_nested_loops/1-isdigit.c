@@ -1,20 +1,14 @@
-#ifndef MAIN_H
-#define MAIN_H
+#include "main.h"
 
-#include <stdio.h>
-
-int _isupper(int c);
-int _isdigit(int c);
-int mul(int a, int b);
-int _putchar(char c);
-void print_numbers(void);
-void print_most_numbers(void);
-void more_numbers(void);
-void print_line(int n);
-void print_diagonal(int n);
-void print_square(int size);
-void print_triangle(int size);
-void num_to_char(unsigned int);
-void print_number(int n);
-
-#endif /* MAIN_H */
+/**
+ * _isdigit - checks for a digit (0 through 9)
+ * @c: digit to be checked
+ * Return: 1 if c is a digit, otherwise 0
+ */
+int _isdigit(int c)
+{
+	if ((c >= 48) && (c <= 57))
+		return (1);
+	else
+		return (0);
+}
