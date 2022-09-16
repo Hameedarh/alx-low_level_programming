@@ -1,20 +1,44 @@
-#ifndef MAIN_H
-#define MAIN_H
+#include "main.h"
 
-#include <stdio.h>
+/**
+ * print_triangle - prints triangle using "#" character of a given size
+ *@size: size of triangle
+ *
+ * Return: void
+ */
+void print_triangle(int size)
+{
+	int i = 1, a = 0;
 
-int _isupper(int c);
-int _isdigit(int c);
-int mul(int a, int b);
-int _putchar(char c);
-void print_numbers(void);
-void print_most_numbers(void);
-void more_numbers(void);
-void print_line(int n);
-void print_diagonal(int n);
-void print_square(int size);
-void print_triangle(int size);
-void num_to_char(unsigned int);
-void print_number(int n);
-
-#endif /* MAIN_H */
+	if (size > 0)
+	{
+		if (size == 1)
+		{
+			_putchar(35);
+			_putchar('\n');
+		}
+		else
+		{
+			while (i <= size)
+			{	a = 0;
+				while (a < size - i)
+				{
+					_putchar(' ');
+					a++;
+				}
+				a = 0;
+				while (a < i)
+				{
+					_putchar(35);
+					a++;
+				}
+				_putchar('\n');
+				i++;
+			}
+		}
+	}
+	else
+	{
+		_putchar('\n');
+	}
+}
