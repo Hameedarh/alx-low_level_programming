@@ -1,20 +1,15 @@
-#ifndef MAIN_H
-#define MAIN_H
+#include "main.h"
 
-#include <stdio.h>
+/**
+ * _isupper - function that checks for uppercase character.
+ * @c: int type number
+ * Return: 1 if c is uppercase, 0 otherwise
+ */
 
-int _isupper(int c);
-int _isdigit(int c);
-int mul(int a, int b);
-int _putchar(char c);
-void print_numbers(void);
-void print_most_numbers(void);
-void more_numbers(void);
-void print_line(int n);
-void print_diagonal(int n);
-void print_square(int size);
-void print_triangle(int size);
-void num_to_char(unsigned int);
-void print_number(int n);
-
-#endif /* MAIN_H */
+int _isupper(int c)
+{
+	if (c >= 65 && c <= 90)
+		return (1);
+	else
+		return (0);
+}
