@@ -1,20 +1,20 @@
-#ifndef MAIN_H
-#define MAIN_H
+#include "main.h"
 
-#include <stdio.h>
+/**
+ * print_most_numbers - prints numbers from 0 to 9 except 2 and 4
+ *
+ *
+ * Return: void
+ */
+void print_most_numbers(void)
+{
+	int c = 48;
 
-int _isupper(int c);
-int _isdigit(int c);
-int mul(int a, int b);
-int _putchar(char c);
-void print_numbers(void);
-void print_most_numbers(void);
-void more_numbers(void);
-void print_line(int n);
-void print_diagonal(int n);
-void print_square(int size);
-void print_triangle(int size);
-void num_to_char(unsigned int);
-void print_number(int n);
-
-#endif /* MAIN_H */
+	while (c < 58)
+	{
+		if (!(c == '2' || c == '4'))
+			_putchar(c);
+		c++;
+	}
+	_putchar('\n');
+}
